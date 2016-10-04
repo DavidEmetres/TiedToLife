@@ -35,8 +35,8 @@ public class PlayerController : MonoBehaviour {
 		cController.SimpleMove (movement * speed);
 
 		if (yMov != 0 || xMov != 0) {
-			float lerpAngle = Mathf.LerpAngle (playerModel.transform.localEulerAngles.y, mainCamera.transform.localEulerAngles.y, Time.deltaTime * 5f);
-			playerModel.transform.localEulerAngles = new Vector3 (playerModel.transform.localEulerAngles.x, lerpAngle, playerModel.transform.localEulerAngles.z);
+			Quaternion newRotation = Quaternion.LookRotation (movement);
+			playerModel.transform.rotation = Quaternion.Lerp(playerModel.transform.rotation, newRotation, Time.deltaTime * 5f);
 		}
 	}
 
