@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 	GameObject playerModel;
 
 	[Range (0.1f, 5f)] public float speed = 4f;
+	[Range (1f, 10f)] public float mouseSensibility = 5f;
 
 	void Start () {
 		cController = GetComponent<CharacterController> ();
@@ -43,6 +44,6 @@ public class PlayerController : MonoBehaviour {
 	void HandleCamera() {
 		float xRot = Input.GetAxis ("Mouse X");
 
-		mainCamera.transform.RotateAround (this.transform.position, Vector3.up, 5f * xRot);
+		mainCamera.transform.RotateAround (this.transform.position, Vector3.up, mouseSensibility * xRot);
 	}
 }
