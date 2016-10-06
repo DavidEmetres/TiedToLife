@@ -12,20 +12,26 @@ public class PatrolState : IEnemy {
 
 	public void UpdateState () {
 		Patrol ();
+		UpdateSight ();
 	}
 
 	public void OnTriggerEnter(Collider other) {
 		if (other.tag == "Player") {
-			enemy.currentState = enemy.chaseState;
+			ToChaseState ();
 		}
 	}
 
+	public void OnTriggerExit(Collider other) {
+
+	}
+
 	public void ToPatrolState() {
-		
+		//Cant change to same state
 	}
 
 	public void ToAlertState() {
 		enemy.currentState = enemy.alertState;
+		enemy.sightAnim.SetTrigger ("Alerting");
 	}
 
 	public void ToChaseState() {
@@ -36,10 +42,24 @@ public class PatrolState : IEnemy {
 		enemy.nav.SetDestination (enemy.wayPoints [nextWayPoint].position);
 
 		if (Vector3.Distance (enemy.transform.position, enemy.wayPoints [nextWayPoint].position) < 2f) {
-			if (nextWayPoint < enemy.wayPoints.Length-1)
-				nextWayPoint++;
-			else
-				nextWayPoint = 0;
+			if (enemy.stops [nextWayPoint]) {
+				if (nextWayPoint < enemy.wayPoints.Length - 1)
+					nextWayPoint++;
+				else
+					nextWayPoint = 0;
+				
+				ToAlertState ();
+			}
+			else {
+				if (nextWayPoint < enemy.wayPoints.Length - 1)
+					nextWayPoint++;
+				else
+					nextWayPoint = 0;
+			}
 		}
+	}
+
+	void UpdateSight() {
+		enemy.sight.material.color = Color.green;
 	}
 }
