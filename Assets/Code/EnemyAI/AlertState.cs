@@ -15,6 +15,7 @@ public class AlertState : IEnemy {
 
 	public void UpdateState () {
 		UpdateSight ();
+
 		if (!timeStarted) {
 			timeCounter = alertTime;
 			timeStarted = true;
@@ -24,19 +25,25 @@ public class AlertState : IEnemy {
 		}
 	}
 
-	public void OnTriggerEnter(Collider other) {
+	public void OnSightTriggerEnter(Collider other) {
 		if (other.tag == "Player") {
-			ToChaseState ();
+			if (!enemy.occluded)
+				ToChaseState ();
 		}
 	}
 
-	public void OnTriggerExit(Collider other) {
+	public void OnSightTriggerExit(Collider other) {
+		//Not used
+	}
 
+	public void OnNearZoneTriggerEnter(Collider other) {
+		//Not used
 	}
 
 	public void ToPatrolState() {
 		enemy.currentState = enemy.patrolState;
 		timeStarted = false;
+		enemy.nav.Resume ();
 	}
 
 	public void ToAlertState() {
@@ -44,10 +51,10 @@ public class AlertState : IEnemy {
 	}
 
 	public void ToChaseState() {
-		Quaternion localRot;
 		enemy.currentState = enemy.chaseState;
 		enemy.sightAnim.SetTrigger ("Alerting");
 		timeStarted = false;
+		enemy.nav.Resume ();
 	}
 
 	void Timer() {

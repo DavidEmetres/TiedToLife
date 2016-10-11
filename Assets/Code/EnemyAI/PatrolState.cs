@@ -15,14 +15,21 @@ public class PatrolState : IEnemy {
 		UpdateSight ();
 	}
 
-	public void OnTriggerEnter(Collider other) {
+	public void OnSightTriggerEnter(Collider other) {
 		if (other.tag == "Player") {
-			ToChaseState ();
+			if (!enemy.occluded)
+				ToChaseState ();
 		}
 	}
 
-	public void OnTriggerExit(Collider other) {
+	public void OnSightTriggerExit(Collider other) {
+		//Not used
+	}
 
+	public void OnNearZoneTriggerEnter(Collider other) {
+		if (other.tag == "Player") {
+			ToAlertState ();
+		}
 	}
 
 	public void ToPatrolState() {
@@ -32,6 +39,7 @@ public class PatrolState : IEnemy {
 	public void ToAlertState() {
 		enemy.currentState = enemy.alertState;
 		enemy.sightAnim.SetTrigger ("Alerting");
+		enemy.nav.Stop ();
 	}
 
 	public void ToChaseState() {

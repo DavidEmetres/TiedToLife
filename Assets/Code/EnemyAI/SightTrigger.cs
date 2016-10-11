@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ChildTrigger : MonoBehaviour {
+public class SightTrigger : MonoBehaviour {
 
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerStay(Collider other) {
 		gameObject.GetComponentInParent<EnemyBehaviour> ().SightTriggered (other);
 	}
 
