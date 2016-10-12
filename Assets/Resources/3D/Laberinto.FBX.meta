@@ -1,36 +1,42 @@
 fileFormatVersion: 2
-guid: 2485396b1d61a8a4287ec36fb84ad051
-timeCreated: 1475739720
+guid: 78ad3f47f857d094cb02e0112e09834f
+timeCreated: 1476204391
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Lisanne1
-    100002: Mesh02
-    100004: Mesh03
-    100006: Mesh04
-    100008: //RootNode
-    400000: Lisanne1
-    400002: Mesh02
-    400004: Mesh03
-    400006: Mesh04
-    400008: //RootNode
-    2300000: Mesh02
-    2300002: Mesh03
-    2300004: Mesh04
-    2300006: //RootNode
-    3300000: Mesh02
-    3300002: Mesh03
-    3300004: Mesh04
-    3300006: //RootNode
+    100000: //RootNode
+    100002: Lisanne1
+    100004: Mesh01
+    100006: Mesh02
+    100008: Mesh03
+    100010: Mesh04
+    400000: //RootNode
+    400002: Lisanne1
+    400004: Mesh01
+    400006: Mesh02
+    400008: Mesh03
+    400010: Mesh04
+    2300000: //RootNode
+    2300002: Mesh01
+    2300004: Mesh02
+    2300006: Mesh03
+    2300008: Mesh04
+    3300000: //RootNode
+    3300002: Mesh01
+    3300004: Mesh02
+    3300006: Mesh03
+    3300008: Mesh04
     4300000: Model
-    4300002: Mesh02
-    4300004: Mesh03
-    4300006: Mesh04
-    6400000: Mesh02
-    6400002: Mesh03
-    6400004: Mesh04
-    6400006: //RootNode
+    4300002: Mesh01
+    4300004: Mesh02
+    4300006: Mesh03
+    4300008: Mesh04
+    6400000: //RootNode
+    6400002: Mesh01
+    6400004: Mesh02
+    6400006: Mesh03
+    6400008: Mesh04
     9500000: //RootNode
   materials:
     importMaterials: 1
