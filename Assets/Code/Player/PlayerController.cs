@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		cController = GetComponent<CharacterController> ();
 		playerModel = transform.GetChild (1).gameObject;
+		mainCamera.transform.RotateAround (this.transform.position, Vector3.up, -140f);
 
 		Cursor.lockState = CursorLockMode.Locked;
 	}
