@@ -6,8 +6,6 @@ public class EnemyBehaviour : MonoBehaviour {
 	public Transform[] wayPoints;
 	public bool[] stops;
 	public float stopTime = 4f;
-	public bool occluded = false;
-	public LayerMask rayCastLayer;
 	[HideInInspector] public Transform target;
 	[HideInInspector] public Animator sightAnim;
 	[HideInInspector] public MeshRenderer sight;
@@ -33,45 +31,23 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	void Update() {
 		currentState.UpdateState ();
-
-		CheckObstacles ();
-		Debug.DrawRay (transform.position, (PlayerController.Instance.transform.position - transform.position));
 	}
 
 	void OnTriggerEnter(Collider other) {
-		
-	}
-
-	void CheckObstacles() {
-		Vector3 direction = PlayerController.Instance.transform.position - transform.position;
-		Ray ray = new Ray (transform.position, direction);
-		RaycastHit hit;
-		if (Physics.Raycast (ray, out hit, Mathf.Infinity, rayCastLayer)) {
-			if (hit.transform.tag == "Player") {
-				occluded = false;
-			}
-			else
-				occluded = true;
-		}
-		else
-			occluded = true;
+		currentState.OnTriggerEnter (other);
 	}
 
 	public void SightTriggered(Collider other) {
 		if (other.tag == "Player" && target == null)
 			target = PlayerController.Instance.gameObject.transform;
 
-		currentState.OnSightTriggerEnter (other);
+		currentState.OnTriggerEnter (other);
 	}
 
 	public void SightExit(Collider other) {
 		if (other.tag == "Player" && target != null)
 			target = null;
 
-		currentState.OnSightTriggerExit (other);
-	}
-
-	public void NearZoneTriggered(Collider other) {
-		currentState.OnNearZoneTriggerEnter (other);
+		currentState.OnTriggerExit (other);
 	}
 }
