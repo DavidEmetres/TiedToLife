@@ -14,26 +14,18 @@ public class ChaseState : IEnemy {
 	public void UpdateState () {
 		Chase ();
 		UpdateSight ();
-
-		if (enemy.occluded)
-			missing = true;
 	}
 
-	public void OnSightTriggerEnter(Collider other) {
+	public void OnTriggerEnter(Collider other) {
 		if (other.tag == "Player") {
-			if(!enemy.occluded)
-				missing = false;
+			missing = false;
 		}
 	}
 
-	public void OnSightTriggerExit(Collider other) {
+	public void OnTriggerExit(Collider other) {
 		if (other.tag == "Player") {
 			missing = true;
 		}
-	}
-
-	public void OnNearZoneTriggerEnter(Collider other) {
-		//Not used
 	}
 
 	public void ToPatrolState() {
