@@ -10,9 +10,16 @@ public class PlayerController : MonoBehaviour {
 	[Range (0.1f, 5f)] public float speed = 4f;
 	[Range (1f, 10f)] public float mouseSensibility = 5f;
 
+	public static PlayerController Instance;
+
+	void Awake() {
+		Instance = this;
+	}
+
 	void Start () {
 		cController = GetComponent<CharacterController> ();
 		playerModel = transform.GetChild (1).gameObject;
+		mainCamera.transform.RotateAround (this.transform.position, Vector3.up, -140f);
 
 		Cursor.lockState = CursorLockMode.Locked;
 	}
