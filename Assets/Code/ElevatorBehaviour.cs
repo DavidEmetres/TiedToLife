@@ -41,7 +41,7 @@ public class ElevatorBehaviour : MonoBehaviour {
 			float timeSinceStarted = Time.time - timeStartedLerping;
 			float percentageComplete = timeSinceStarted / timeTakenDuringLerp;
 
-			transform.position = Vector3.Lerp (startPosition, endPosition, percentageComplete);
+			transform.localPosition = Vector3.Lerp (startPosition, endPosition, percentageComplete);
 
 			if(percentageComplete >= 1.0f)
 			{

@@ -1,44 +1,24 @@
 fileFormatVersion: 2
 guid: 49446e2ccf9ac5c4b865404a84c568d3
-timeCreated: 1476272284
+timeCreated: 1476789163
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Lisanne1
-    100002: Mesh02
-    100004: Mesh03
-    100006: Mesh04
-    100008: Model
-    100010: //RootNode
-    100012: Paredes
-    400000: Lisanne1
-    400002: Mesh02
-    400004: Mesh03
-    400006: Mesh04
-    400008: Model
-    400010: //RootNode
-    400012: Paredes
-    2300000: Mesh02
-    2300002: Mesh03
-    2300004: Mesh04
-    2300006: Model
-    2300008: Paredes
-    3300000: Mesh02
-    3300002: Mesh03
-    3300004: Mesh04
-    3300006: Model
-    3300008: Paredes
+    100000: Model
+    100002: //RootNode
+    100004: Pared
+    400000: Model
+    400002: //RootNode
+    400004: Pared
+    2300000: Model
+    2300002: Pared
+    3300000: Model
+    3300002: Pared
     4300000: Model
-    4300002: Mesh02
-    4300004: Mesh03
-    4300006: Mesh04
-    4300008: Paredes
-    6400000: Mesh02
-    6400002: Mesh03
-    6400004: Mesh04
-    6400006: Model
-    6400008: Paredes
+    4300002: Pared
+    6400000: Model
+    6400002: Pared
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -64,7 +44,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1.5
+    globalScale: 1
     meshCompression: 0
     addColliders: 1
     importBlendShapes: 1

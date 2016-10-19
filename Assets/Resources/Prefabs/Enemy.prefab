@@ -285,7 +285,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  stops: 0101000101
+  stops: 0001000001
   stopTime: 4
   occluded: 0
   rayCastLayer:

@@ -7,7 +7,7 @@ public class LeverBehaviour : MonoBehaviour {
 	bool active = false;
 
 	void Update() {
-		if (Input.GetKeyDown (KeyCode.LeftShift))
+		if (Input.GetKeyDown (KeyCode.LeftShift) && this.name == "Lever")
 			Use ();
 	}
 
