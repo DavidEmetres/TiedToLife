@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class LevelStructure : MonoBehaviour {
 
 	[SerializeField] List<GameObject> objOrder = new List<GameObject>();
+	[SerializeField] List<GameObject> enemiesInLevel = new List<GameObject>();
 
 	public static LevelStructure Instance;
 
@@ -22,5 +23,9 @@ public class LevelStructure : MonoBehaviour {
 
 	public void NextStep() {
 		objOrder.RemoveAt (0);
+	}
+
+	public List<GameObject> GetEnemiesInLevel() {
+		return enemiesInLevel;
 	}
 }

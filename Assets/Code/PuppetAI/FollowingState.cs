@@ -36,12 +36,17 @@ public class FollowingState : IPuppetState
 
 	public void ToFollowingState()
 	{
-
+		puppet.navMeshAgent.stoppingDistance = 4;
+		puppet.currentState = puppet.followingState;
 	}
 
 	public void ToStillState()
 	{
 		
+	}
+
+	public void ToRunningAwayState() {
+		puppet.currentState = puppet.runningAwayState;
 	}
 
 	private void FollowPlayer()

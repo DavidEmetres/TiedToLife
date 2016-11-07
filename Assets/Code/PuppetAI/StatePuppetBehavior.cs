@@ -5,14 +5,10 @@ using System.Collections.Generic;
 public class StatePuppetBehavior : MonoBehaviour {
 
 	GameObject objectInteractingNow;
-
 	public float followingSpeed;
-	//public float followingDistance;
-	//public Vector3 offset = new Vector3 (0, 5f, 0);
-	//public float sightRange = 500f;
-	//public Transform player;
-
-	public List<GameObject> objectsInSight = new List<GameObject> ();
+	public float closerDistanceToEnemies;
+	[HideInInspector] public List<GameObject> closeEnemies = new List<GameObject> ();
+	[HideInInspector] public List<GameObject> objectsInSight = new List<GameObject> ();
 	[HideInInspector] public Transform target;
 	[HideInInspector] public Transform chaseTarget;
 	[HideInInspector] public Collider rangeMax;
@@ -21,6 +17,7 @@ public class StatePuppetBehavior : MonoBehaviour {
 	[HideInInspector] public StillState stillState;
 	[HideInInspector] public FollowingState followingState;
 	[HideInInspector] public InteractState interactState;
+	[HideInInspector] public RunningAwayState runningAwayState;
 	[HideInInspector] public NavMeshAgent navMeshAgent;
 	[HideInInspector] public bool isGrabbed = true;
 
@@ -34,6 +31,7 @@ public class StatePuppetBehavior : MonoBehaviour {
 		interactState = new InteractState (this);
 		followingState = new FollowingState (this);
 		stillState = new StillState (this);
+		runningAwayState = new RunningAwayState (this);
 
 		navMeshAgent = GetComponent<NavMeshAgent> ();
 	}
@@ -47,9 +45,17 @@ public class StatePuppetBehavior : MonoBehaviour {
 	{
 		Debug.Log (currentState);
 		currentState.UpdateState ();
+		Debug.Log ("Close Enemies: " + closeEnemies.Count);
+		if (GetCloseEnemies ()) {
+			currentState.ToRunningAwayState ();
+		}
+		else {
+			if (objectsInSight.Count > 0)
+				Evaluation ();
 
-		if (objectsInSight.Count > 0)
-			Evaluation ();
+			if (objectInteractingNow == null)
+				currentState.ToFollowingState ();
+		}
 
 		if (isGrabbed) {
 			if (Vector3.Distance (this.transform.position, PlayerController.Instance.gameObject.transform.position) > navMeshAgent.stoppingDistance) {
@@ -57,7 +63,8 @@ public class StatePuppetBehavior : MonoBehaviour {
 					navMeshAgent.Stop ();
 					transform.position = Vector3.Slerp (transform.position, PlayerController.Instance.gameObject.transform.position, Time.deltaTime);
 				}
-			} else if (navMeshAgent.destination != null)
+			}
+			else if (navMeshAgent.destination != null)
 				navMeshAgent.Resume ();
 		}
 
@@ -87,9 +94,9 @@ public class StatePuppetBehavior : MonoBehaviour {
 	{
 		if (other.tag == "interactive")
 		{
-			Debug.Log (objColliding.name + " SALIO DEL COLLIDER");
 			if (objColliding == target.gameObject) {
-				currentState.ToFollowingState ();
+				if(currentState != runningAwayState)
+					currentState.ToFollowingState ();
 				objectInteractingNow = null;
 			}
 
@@ -109,5 +116,32 @@ public class StatePuppetBehavior : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	bool GetCloseEnemies() {
+		foreach (GameObject enemy in LevelStructure.Instance.GetEnemiesInLevel()) {
+			float distance = Vector3.Distance (transform.position, enemy.transform.position);
+
+			if (distance <= closerDistanceToEnemies && EnemyGettingCloser(enemy)) {
+				if(!closeEnemies.Contains(enemy))
+					closeEnemies.Add (enemy);
+			}
+			else if(distance > closerDistanceToEnemies || !EnemyGettingCloser(enemy)){
+				if (closeEnemies.Contains(enemy))
+					closeEnemies.Remove (enemy);
+			}
+		}
+
+		return closeEnemies.Count > 0;
+	}
+
+	bool EnemyGettingCloser(GameObject enemy) {
+		Vector3 directionEnemyPlayer = transform.position - enemy.transform.position;
+
+		if (Vector3.Angle (directionEnemyPlayer, enemy.GetComponent<EnemyBehaviour> ().direction) <= 40f) {
+			return true;
+		}
+		else
+			return false;
 	}
 }

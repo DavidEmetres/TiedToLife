@@ -49,6 +49,10 @@ public class InteractState : IPuppetState
 
 	}
 
+	public void ToRunningAwayState() {
+		puppet.currentState = puppet.runningAwayState;
+	}
+
 	private void GoInteract()
 	{
 		pos = puppet.target.position;

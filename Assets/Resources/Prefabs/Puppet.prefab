@@ -646,7 +646,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012073376500}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.26, y: 0.86, z: 5.5}
+  m_LocalPosition: {x: -14.94, y: 1.39, z: -8.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1521,6 +1521,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followingSpeed: 0
+  closerDistanceToEnemies: 18
+  closeEnemies: []
+  objectsInSight: []
   target: {fileID: 0}
   chaseTarget: {fileID: 0}
   rangeMax: {fileID: 0}

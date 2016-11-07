@@ -13,6 +13,8 @@ public class PatrolState : IEnemy {
 	public void UpdateState () {
 		Patrol ();
 		UpdateSight ();
+
+		enemy.direction = enemy.nav.destination - enemy.transform.position;
 	}
 
 	public void OnSightTriggerEnter(Collider other) {

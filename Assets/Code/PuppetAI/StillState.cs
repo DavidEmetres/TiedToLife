@@ -40,6 +40,10 @@ public class StillState : IPuppetState
 
 	}
 
+	public void ToRunningAwayState() {
+
+	}
+
 	private void LogStill()
 	{
 		

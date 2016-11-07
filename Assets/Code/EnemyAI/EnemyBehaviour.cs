@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EnemyBehaviour : MonoBehaviour {
 
+	public Vector3 direction;
 	public Transform[] wayPoints;
 	public bool[] stops;
 	public float stopTime = 4f;
