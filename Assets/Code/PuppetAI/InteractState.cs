@@ -15,7 +15,12 @@ public class InteractState : IPuppetState
 
 	public void UpdateState()
 	{
-		GoInteract ();
+		if (Vector3.Distance(puppet.transform.position, puppet.target.transform.position) > puppet.navMeshAgent.stoppingDistance)
+			GoInteract ();
+		else
+			Interact ();
+
+		LookAt ();
 	}
 
 	public void OnTriggerEnter(Collider other)
@@ -25,8 +30,7 @@ public class InteractState : IPuppetState
 
 	public void OnTriggerExit(Collider other)
 	{
-		if (other.tag == "Player")
-			ToFollowingState ();
+
 	}
 
 	public void ToInteractState()
@@ -47,9 +51,21 @@ public class InteractState : IPuppetState
 
 	private void GoInteract()
 	{
-		Debug.Log ("Yendo al boton");
-		puppet.navMeshAgent.stoppingDistance = 0;
 		pos = puppet.target.position;
 		puppet.navMeshAgent.SetDestination (pos);
+	}
+
+	void Interact() {
+		if (puppet.target.gameObject.GetComponent<InteractiveBehaviour> ().currentState == 0) {
+			puppet.target.gameObject.GetComponent<InteractiveBehaviour> ().Use ();
+		}
+	}
+
+	public void LookAt()
+	{
+		Vector3 lookPos = puppet.target.position - puppet.transform.position;
+		lookPos.y = 0;
+		Quaternion rotation = Quaternion.LookRotation (lookPos);
+		puppet.transform.rotation = Quaternion.Slerp (puppet.transform.rotation, rotation, Time.deltaTime * 5f);
 	}
 }

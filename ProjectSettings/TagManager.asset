@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Lever
   - Button
+  - Puppet
+  - interactive
   layers:
   - Default
   - TransparentFX

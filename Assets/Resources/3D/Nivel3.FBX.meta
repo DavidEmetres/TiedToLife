@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: e625b81785d1b924289cdff173ad0ee5
+timeCreated: 1478361348
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Asset
+    100002: Box001
+    100004: Elevador
+    100006: Enemigo
+    100008: Enemigo001
+    100010: Lisanne1
+    100012: Mesh02
+    100014: Mesh03
+    100016: Mesh04
+    100018: Model
+    100020: //RootNode
+    100022: 'Palanca002 '
+    100024: Palanca003
+    100026: Palanca004
+    100028: Palanca005
+    100030: Palanca1 Plataforma
+    100032: Pared
+    100034: Pared1
+    100036: Pared2
+    100038: Suelo
+    400000: Asset
+    400002: Box001
+    400004: Elevador
+    400006: Enemigo
+    400008: Enemigo001
+    400010: Lisanne1
+    400012: Mesh02
+    400014: Mesh03
+    400016: Mesh04
+    400018: Model
+    400020: //RootNode
+    400022: 'Palanca002 '
+    400024: Palanca003
+    400026: Palanca004
+    400028: Palanca005
+    400030: Palanca1 Plataforma
+    400032: Pared
+    400034: Pared1
+    400036: Pared2
+    400038: Suelo
+    2300000: Asset
+    2300002: Box001
+    2300004: Elevador
+    2300006: Enemigo
+    2300008: Enemigo001
+    2300010: Mesh02
+    2300012: Mesh03
+    2300014: Mesh04
+    2300016: 'Palanca002 '
+    2300018: Palanca003
+    2300020: Palanca004
+    2300022: Palanca005
+    2300024: Palanca1 Plataforma
+    2300026: Pared
+    2300028: Pared1
+    2300030: Pared2
+    2300032: Suelo
+    3300000: Asset
+    3300002: Box001
+    3300004: Elevador
+    3300006: Enemigo
+    3300008: Enemigo001
+    3300010: Mesh02
+    3300012: Mesh03
+    3300014: Mesh04
+    3300016: 'Palanca002 '
+    3300018: Palanca003
+    3300020: Palanca004
+    3300022: Palanca005
+    3300024: Palanca1 Plataforma
+    3300026: Pared
+    3300028: Pared1
+    3300030: Pared2
+    3300032: Suelo
+    4300000: Mesh02
+    4300002: Mesh03
+    4300004: Mesh04
+    4300006: Suelo
+    4300008: Pared
+    4300010: Pared2
+    4300012: Pared1
+    4300014: Palanca1 Plataforma
+    4300016: Asset
+    4300018: 'Palanca002 '
+    4300020: Palanca003
+    4300022: Palanca004
+    4300024: Enemigo
+    4300026: Enemigo001
+    4300028: Elevador
+    4300030: Box001
+    4300032: Palanca005
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

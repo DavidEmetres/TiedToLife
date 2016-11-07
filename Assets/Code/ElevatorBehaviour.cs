@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ElevatorBehaviour : MonoBehaviour {
 
-	[SerializeField] GameObject attachedObj;
 	bool up = false;
 	bool isLerping = false;
 	float timeStartedLerping;
@@ -13,6 +12,7 @@ public class ElevatorBehaviour : MonoBehaviour {
 	public Vector3 upPos;
 	public Vector3 defaultPos;
 	public float timeTakenDuringLerp;
+	public bool isReady = false;
 
 	public void Use() {
 		if(!isLerping)
@@ -48,6 +48,18 @@ public class ElevatorBehaviour : MonoBehaviour {
 				isLerping = false;
 				up = !up;
 			}
+		}
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.tag == "Player") {
+			isReady = true;
+		}
+	}
+
+	void OnTriggerExit(Collider other) {
+		if (other.tag == "Player") {
+			isReady = false;
 		}
 	}
 }

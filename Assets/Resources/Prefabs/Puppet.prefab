@@ -45,6 +45,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000010246159162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012354184804}
+  - 135: {fileID: 135000013665370272}
+  - 114: {fileID: 114000013693198006}
+  m_Layer: 0
+  m_Name: SightCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000010431266670
 GameObject:
   m_ObjectHideFlags: 1
@@ -518,6 +535,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000013337284870}
   m_RootOrder: 13
+--- !u!4 &4000012354184804
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010246159162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013241091768}
+  m_RootOrder: 1
 --- !u!4 &4000012500482854
 Transform:
   m_ObjectHideFlags: 1
@@ -621,6 +651,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000013337284870}
+  - {fileID: 4000012354184804}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000013337284870
@@ -1490,15 +1521,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followingSpeed: 0
-  followingDistance: 0
-  offset: {x: 0, y: 5, z: 0}
-  sightRange: 500
-  player: {fileID: 0}
   target: {fileID: 0}
   chaseTarget: {fileID: 0}
   rangeMax: {fileID: 0}
   rangeMin: {fileID: 0}
   navMeshAgent: {fileID: 0}
+  isGrabbed: 1
+--- !u!114 &114000013693198006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010246159162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349686b554ab8844e9fd75946f9a454c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &135000013665370272
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010246159162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136000012485165270
 CapsuleCollider:
   m_ObjectHideFlags: 1
