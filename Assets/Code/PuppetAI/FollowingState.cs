@@ -36,13 +36,12 @@ public class FollowingState : IPuppetState
 
 	public void ToFollowingState()
 	{
-		puppet.navMeshAgent.stoppingDistance = 4;
-		puppet.currentState = puppet.followingState;
+		//Same state
 	}
 
 	public void ToStillState()
 	{
-		
+		puppet.currentState = puppet.stillState;
 	}
 
 	public void ToRunningAwayState() {
@@ -53,6 +52,7 @@ public class FollowingState : IPuppetState
 	{
 		puppet.target = PlayerController.Instance.transform;
 		puppet.navMeshAgent.SetDestination (puppet.target.position);
+		puppet.navMeshAgent.Resume ();
 	}
 
 	public void LookAt()

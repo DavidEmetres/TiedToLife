@@ -35,7 +35,7 @@ public class InteractState : IPuppetState
 
 	public void ToInteractState()
 	{
-
+		//Same state
 	}
 
 	public void ToFollowingState()
@@ -46,7 +46,7 @@ public class InteractState : IPuppetState
 
 	public void ToStillState()
 	{
-
+		puppet.currentState = puppet.stillState;
 	}
 
 	public void ToRunningAwayState() {
@@ -57,6 +57,7 @@ public class InteractState : IPuppetState
 	{
 		pos = puppet.target.position;
 		puppet.navMeshAgent.SetDestination (pos);
+		puppet.navMeshAgent.Resume ();
 	}
 
 	void Interact() {

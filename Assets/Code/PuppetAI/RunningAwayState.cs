@@ -36,16 +36,17 @@ public class RunningAwayState : IPuppetState {
 
 	public void ToFollowingState()
 	{
-
+		puppet.navMeshAgent.stoppingDistance = 4;
+		puppet.currentState = puppet.followingState;
 	}
 
 	public void ToStillState()
 	{
-
+		puppet.currentState = puppet.stillState;
 	}
 
 	public void ToRunningAwayState() {
-
+		//Same state
 	}
 
 	void GetRunningDirection() {

@@ -5,6 +5,9 @@ using System.Collections.Generic;
 public class StatePuppetBehavior : MonoBehaviour {
 
 	GameObject objectInteractingNow;
+	float puppetLifeTime = 5f;
+	float puppetTimer;
+
 	public float followingSpeed;
 	public float closerDistanceToEnemies;
 	[HideInInspector] public List<GameObject> closeEnemies = new List<GameObject> ();
@@ -43,36 +46,38 @@ public class StatePuppetBehavior : MonoBehaviour {
 	
 	void Update ()
 	{
-		Debug.Log (currentState);
 		currentState.UpdateState ();
-		Debug.Log ("Close Enemies: " + closeEnemies.Count);
-		if (GetCloseEnemies ()) {
-			currentState.ToRunningAwayState ();
-		}
+
+		if (currentState != stillState) {
+			if (GetCloseEnemies ()) {
+				currentState.ToRunningAwayState ();
+			}
+			else {
+				if (objectsInSight.Count > 0)
+					Evaluation ();
+
+				if (objectInteractingNow == null)
+					currentState.ToFollowingState ();
+			}
+
+			//PUPPET GRABBED BEHAVIOUR
+			if (isGrabbed) {
+				if (Vector3.Distance (this.transform.position, PlayerController.Instance.gameObject.transform.position) > navMeshAgent.stoppingDistance) {
+					if (navMeshAgent.destination != null) {
+						navMeshAgent.Stop ();
+						transform.position = Vector3.Slerp (transform.position, PlayerController.Instance.gameObject.transform.position, Time.deltaTime);
+					}
+				}
+				else if (navMeshAgent.destination != null)
+					navMeshAgent.Resume ();
+			}
+
+		//PUPPET LIFE TIMER
 		else {
-			if (objectsInSight.Count > 0)
-				Evaluation ();
-
-			if (objectInteractingNow == null)
-				currentState.ToFollowingState ();
-		}
-
-		if (isGrabbed) {
-			if (Vector3.Distance (this.transform.position, PlayerController.Instance.gameObject.transform.position) > navMeshAgent.stoppingDistance) {
-				if (navMeshAgent.destination != null) {
-					navMeshAgent.Stop ();
-					transform.position = Vector3.Slerp (transform.position, PlayerController.Instance.gameObject.transform.position, Time.deltaTime);
+				if (Time.realtimeSinceStartup >= puppetTimer) {
+					currentState.ToStillState ();
 				}
 			}
-			else if (navMeshAgent.destination != null)
-				navMeshAgent.Resume ();
-		}
-
-		if (Input.GetKeyDown (KeyCode.F)) {
-			if (isGrabbed)
-				isGrabbed = false;
-			else
-				isGrabbed = true;
 		}
 	}
 
@@ -126,7 +131,7 @@ public class StatePuppetBehavior : MonoBehaviour {
 				if(!closeEnemies.Contains(enemy))
 					closeEnemies.Add (enemy);
 			}
-			else if(distance > closerDistanceToEnemies || !EnemyGettingCloser(enemy)){
+			else {
 				if (closeEnemies.Contains(enemy))
 					closeEnemies.Remove (enemy);
 			}
@@ -143,5 +148,19 @@ public class StatePuppetBehavior : MonoBehaviour {
 		}
 		else
 			return false;
+	}
+
+	public void GrabPuppet(bool b) {
+		if (!b)
+			puppetTimer = Time.realtimeSinceStartup + puppetLifeTime;
+		else if (currentState == stillState)
+			currentState.ToFollowingState ();
+		
+		isGrabbed = b;
+	}
+
+	void OnGUI() {
+		float lifeTime = (isGrabbed)? 5f : (puppetTimer - Time.realtimeSinceStartup);
+		GUI.Label (new Rect (100, 100, 100, 100), "LIFE TIME: " + lifeTime);
 	}
 }

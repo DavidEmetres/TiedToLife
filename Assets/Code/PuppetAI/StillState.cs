@@ -12,7 +12,7 @@ public class StillState : IPuppetState
 
 	public void UpdateState()
 	{
-		
+		puppet.navMeshAgent.Stop ();
 	}
 
 	public void OnTriggerEnter(Collider other)
@@ -27,25 +27,21 @@ public class StillState : IPuppetState
 
 	public void ToInteractState()
 	{
-
+		//Not possible
 	}
 
 	public void ToFollowingState()
 	{
-
+		puppet.navMeshAgent.stoppingDistance = 4;
+		puppet.currentState = puppet.followingState;
 	}
 
 	public void ToStillState()
 	{
-
+		//Same state
 	}
 
 	public void ToRunningAwayState() {
-
-	}
-
-	private void LogStill()
-	{
-		
+		//Not possible
 	}
 }

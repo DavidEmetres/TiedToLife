@@ -62,6 +62,12 @@ public class EnemyBehaviour : MonoBehaviour {
 		if (other.tag == "Player" && target == null)
 			target = PlayerController.Instance.gameObject.transform;
 
+		if (other.tag == "Puppet") {
+			Debug.Log ("PUPPET TRIGGERED");
+			StatePuppetBehavior.Instance.GrabPuppet (false);
+			StatePuppetBehavior.Instance.currentState.ToStillState ();
+		}
+
 		currentState.OnSightTriggerEnter (other);
 	}
 
