@@ -279,7 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19605e4079a6ab141a10582441f8af89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 0}
   wayPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -292,6 +291,7 @@ MonoBehaviour:
   rayCastLayer:
     serializedVersion: 2
     m_Bits: 4294967291
+  direction: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
   sightAnim: {fileID: 0}
   sight: {fileID: 0}

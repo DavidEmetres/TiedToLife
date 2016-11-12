@@ -3,12 +3,12 @@ using System.Collections;
 
 public class EnemyBehaviour : MonoBehaviour {
 
-	public Vector3 direction;
 	public Transform[] wayPoints;
 	public bool[] stops;
 	public float stopTime = 4f;
 	public bool occluded = false;
 	public LayerMask rayCastLayer;
+	[HideInInspector] public Vector3 direction;
 	[HideInInspector] public Transform target;
 	[HideInInspector] public Animator sightAnim;
 	[HideInInspector] public MeshRenderer sight;
@@ -34,7 +34,6 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	void Update() {
 		currentState.UpdateState ();
-
 		CheckObstacles ();
 		Debug.DrawRay (transform.position, (PlayerController.Instance.transform.position - transform.position));
 	}
@@ -44,7 +43,8 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	void CheckObstacles() {
-		Vector3 direction = PlayerController.Instance.transform.position - transform.position;
+		Vector3 pos = new Vector3 (PlayerController.Instance.transform.position.x, transform.position.y, PlayerController.Instance.transform.position.z);
+		Vector3 direction = pos - transform.position;
 		Ray ray = new Ray (transform.position, direction);
 		RaycastHit hit;
 		if (Physics.Raycast (ray, out hit, Mathf.Infinity, rayCastLayer)) {
@@ -59,11 +59,11 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	public void SightTriggered(Collider other) {
-		if (other.tag == "Player" && target == null)
+		if (other.tag == "Player" && target == null) {
 			target = PlayerController.Instance.gameObject.transform;
+		}
 
 		if (other.tag == "Puppet") {
-			Debug.Log ("PUPPET TRIGGERED");
 			StatePuppetBehavior.Instance.GrabPuppet (false);
 			StatePuppetBehavior.Instance.currentState.ToStillState ();
 		}

@@ -14,14 +14,15 @@ public class PlayerController : MonoBehaviour {
 
 	void Awake() {
 		Instance = this;
+
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 	}
 
 	void Start () {
 		cController = GetComponent<CharacterController> ();
 		playerModel = transform.GetChild (1).gameObject;
 		mainCamera.transform.RotateAround (this.transform.position, Vector3.up, -140f);
-
-		Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	void Update () {

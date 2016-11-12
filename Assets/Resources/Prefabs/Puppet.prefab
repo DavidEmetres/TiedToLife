@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000010062752032}
   - 33: {fileID: 33000014059621390}
   - 23: {fileID: 23000013606798608}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HairRetopo_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - 4: {fileID: 4000011702918742}
   - 33: {fileID: 33000010709434030}
   - 23: {fileID: 23000013886900992}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RightLegReto_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - 4: {fileID: 4000012354184804}
   - 135: {fileID: 135000013665370272}
   - 114: {fileID: 114000013693198006}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SightCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - 4: {fileID: 4000011007846698}
   - 33: {fileID: 33000013899043190}
   - 23: {fileID: 23000013399887326}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EyelashEyeBrowReto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - 4: {fileID: 4000013142319316}
   - 33: {fileID: 33000012536964008}
   - 23: {fileID: 23000010027826942}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LeftEyeRetopo_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - 4: {fileID: 4000012898936830}
   - 33: {fileID: 33000012135169598}
   - 23: {fileID: 23000011623153114}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RightLegReto_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - 4: {fileID: 4000012608545000}
   - 33: {fileID: 33000011019834658}
   - 23: {fileID: 23000011935773688}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eye_pupil_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - 4: {fileID: 4000014169291982}
   - 33: {fileID: 33000014225927628}
   - 23: {fileID: 23000014260419674}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BowTieLeft_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - 4: {fileID: 4000011056647030}
   - 33: {fileID: 33000013845438080}
   - 23: {fileID: 23000010393151040}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ChalecoRetopo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - 4: {fileID: 4000013167468324}
   - 33: {fileID: 33000012909266518}
   - 23: {fileID: 23000012613916866}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: trousers8_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - 4: {fileID: 4000011965462872}
   - 33: {fileID: 33000012247191384}
   - 23: {fileID: 23000011901013180}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LeftHandReto_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - 4: {fileID: 4000013950510470}
   - 33: {fileID: 33000014079998852}
   - 23: {fileID: 23000014213710976}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BowTieRight_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   - 136: {fileID: 136000012485165270}
   - 136: {fileID: 136000011348046834}
   - 54: {fileID: 54000012528855010}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Puppet
   m_TagString: Puppet
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013337284870}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Scott
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - 4: {fileID: 4000011998296094}
   - 33: {fileID: 33000010687093166}
   - 23: {fileID: 23000013481975418}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: trousers9_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - 4: {fileID: 4000013341646250}
   - 33: {fileID: 33000010336159386}
   - 23: {fileID: 23000011510253594}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HeadRetopo_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - 4: {fileID: 4000011619520758}
   - 33: {fileID: 33000013471031610}
   - 23: {fileID: 23000011637534278}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ButtonsReto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   - 4: {fileID: 4000011899915738}
   - 33: {fileID: 33000013640735866}
   - 23: {fileID: 23000012311215044}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: trousers6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - 4: {fileID: 4000012879157738}
   - 33: {fileID: 33000011611447736}
   - 23: {fileID: 23000011099574330}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TrousersRetopo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   - 4: {fileID: 4000012321795072}
   - 33: {fileID: 33000011845359502}
   - 23: {fileID: 23000013485525670}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PM3D_Sphere3D_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   - 4: {fileID: 4000012500482854}
   - 33: {fileID: 33000010945542300}
   - 23: {fileID: 23000012910776610}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Eye_pupil_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   - 4: {fileID: 4000012859356714}
   - 33: {fileID: 33000013748569860}
   - 23: {fileID: 23000013394845236}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LeftEyeRetopo_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   - 4: {fileID: 4000013990418258}
   - 33: {fileID: 33000013136167274}
   - 23: {fileID: 23000012357625646}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LeftHandReto_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   - 4: {fileID: 4000013583483706}
   - 33: {fileID: 33000011392682682}
   - 23: {fileID: 23000010288451688}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: trousers7_2_SeamsColor_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
