@@ -23,8 +23,11 @@ public class PlayerInteractions : MonoBehaviour {
 		}
 
 		if (StatePuppetBehavior.Instance.isGrabbed) {
+			SetStringsVisible (true);
 			UpdateStrings ();
 		}
+		else
+			SetStringsVisible (false);
 	}
 
 	void OnTriggerStay(Collider other) {
@@ -45,6 +48,12 @@ public class PlayerInteractions : MonoBehaviour {
 		}
 	}
 
+	void SetStringsVisible(bool b) {
+		foreach (GameObject s in puppetStrings) {
+			s.SetActive (b);
+		}
+	}
+
 	void UpdateStrings() {
 		for (int i = 0; i < puppetStrings.Length; i++) {
 			puppetStrings [i].GetComponent<LineRenderer> ().SetPosition (0, stringStart.position);
@@ -56,7 +65,7 @@ public class PlayerInteractions : MonoBehaviour {
 		GameObject line = new GameObject ();
 		line.transform.position = start;
 		line.AddComponent<LineRenderer> ();
-		line.transform.SetParent (this.transform);
+		line.transform.SetParent (this.transform.GetChild(3).transform);
 		LineRenderer lr = line.GetComponent<LineRenderer> ();
 		lr.material = new Material (Shader.Find ("Particles/Alpha Blended Premultiply"));
 		lr.SetColors (color, color);
