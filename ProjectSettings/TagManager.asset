@@ -8,6 +8,7 @@ TagManager:
   - Button
   - Puppet
   - interactive
+  - Enemy
   layers:
   - Default
   - TransparentFX

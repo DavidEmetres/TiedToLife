@@ -28,4 +28,19 @@ public class LevelStructure : MonoBehaviour {
 	public List<GameObject> GetEnemiesInLevel() {
 		return enemiesInLevel;
 	}
+
+	public void AddNextAction(GameObject obj) {
+		List<GameObject> temp = new List<GameObject>();
+
+		foreach (GameObject o in objOrder) {
+			temp.Add (o);
+		}
+
+		objOrder.Clear ();
+		objOrder.Add (obj);
+
+		foreach (GameObject o in temp) {
+			objOrder.Add (o);
+		}
+	}
 }

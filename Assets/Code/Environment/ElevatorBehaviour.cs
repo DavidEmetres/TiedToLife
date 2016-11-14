@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ElevatorBehaviour : MonoBehaviour {
 
-	bool up = false;
+	public bool up = false;
 	bool isLerping = false;
 	float timeStartedLerping;
 	Vector3 startPosition;
@@ -51,7 +51,7 @@ public class ElevatorBehaviour : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter(Collider other) {
+	/*void OnTriggerEnter(Collider other) {
 		if (other.tag == "Player") {
 			isReady = true;
 		}
@@ -61,5 +61,5 @@ public class ElevatorBehaviour : MonoBehaviour {
 		if (other.tag == "Player") {
 			isReady = false;
 		}
-	}
+	}*/
 }

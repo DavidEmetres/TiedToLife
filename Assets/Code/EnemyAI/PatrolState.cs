@@ -49,6 +49,7 @@ public class PatrolState : IEnemy {
 	}
 
 	void Patrol() {
+		enemy.nav.Resume ();
 		enemy.nav.SetDestination (enemy.wayPoints [nextWayPoint].position);
 
 		if (Vector3.Distance (enemy.transform.position, enemy.wayPoints [nextWayPoint].position) < 2f) {
@@ -70,6 +71,6 @@ public class PatrolState : IEnemy {
 	}
 
 	void UpdateSight() {
-		enemy.sight.material.color = Color.green;
+		enemy.sight.material.color = new Color(0,1,0,0.25f);
 	}
 }

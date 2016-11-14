@@ -31,7 +31,7 @@ public class FollowingState : IPuppetState
 	public void ToInteractState()
 	{
 		puppet.currentState = puppet.interactState;
-		puppet.navMeshAgent.stoppingDistance = 2;
+		puppet.navMeshAgent.stoppingDistance = 1;
 	}
 
 	public void ToFollowingState()

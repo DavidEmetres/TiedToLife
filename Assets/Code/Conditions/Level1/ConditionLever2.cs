@@ -15,8 +15,9 @@ public class ConditionLever2 : MonoBehaviour {
 		if (isReady) {
 			attachedObjs[0].GetComponent<ElevatorBehaviour> ().Use ();
 			attachedObjs [1].GetComponent<InteractiveBehaviour> ().currentState = -1;
-			StatePuppetBehavior.Instance.objectsInSight.Add (attachedObjs [2]);
+			attachedObjs [2].GetComponent<InteractiveBehaviour> ().currentState = 0;
 			isReady = false;
+			StatePuppetBehavior.Instance.objectsInSight.Add (attachedObjs [2]);
 			LevelStructure.Instance.NextStep ();
 			StatePuppetBehavior.Instance.currentState.ToFollowingState ();
 		}

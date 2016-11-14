@@ -12,9 +12,7 @@ public class InteractiveBehaviour : MonoBehaviour {
 	}
 
 	void Update() {
-		if (this.gameObject.name == "Lever") {
-			Debug.Log ("LEVER1 STATE: " + currentState + ", PRIORIDAD: " + LevelStructure.Instance.GetPriority(this.gameObject));
-		}
+
 	}
 
 	public void Use() {

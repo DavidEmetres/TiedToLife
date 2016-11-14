@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public class StatePuppetBehavior : MonoBehaviour {
 
 	GameObject objectInteractingNow;
-	float puppetLifeTime = 5f;
 	float puppetTimer;
 
+	public float puppetLifeTime;
 	public float followingSpeed;
 	public float closerDistanceToEnemies;
 	[HideInInspector] public List<GameObject> closeEnemies = new List<GameObject> ();
@@ -47,7 +47,7 @@ public class StatePuppetBehavior : MonoBehaviour {
 	void Update ()
 	{
 		currentState.UpdateState ();
-
+		Debug.Log (currentState);
 		if (currentState != stillState) {
 			if (GetCloseEnemies ()) {
 				currentState.ToRunningAwayState ();
@@ -128,7 +128,7 @@ public class StatePuppetBehavior : MonoBehaviour {
 			float distance = Vector3.Distance (transform.position, enemy.transform.position);
 
 			if (distance <= closerDistanceToEnemies && EnemyGettingCloser(enemy)) {
-				if(!closeEnemies.Contains(enemy))
+				if (!closeEnemies.Contains (enemy) && !enemy.GetComponent<EnemyBehaviour>().puppetOccluded)
 					closeEnemies.Add (enemy);
 			}
 			else {
@@ -160,7 +160,7 @@ public class StatePuppetBehavior : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		float lifeTime = (isGrabbed)? 5f : (puppetTimer - Time.realtimeSinceStartup);
+		float lifeTime = (isGrabbed)? puppetLifeTime : (puppetTimer - Time.realtimeSinceStartup);
 		GUI.Label (new Rect (100, 100, 100, 100), "LIFE TIME: " + lifeTime);
 	}
 }

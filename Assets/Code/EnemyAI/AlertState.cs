@@ -68,6 +68,6 @@ public class AlertState : IEnemy {
 	}
 
 	void UpdateSight() {
-		enemy.sight.material.color = Color.yellow;
+		enemy.sight.material.color = new Color(1,1,0,0.25f);
 	}
 }
