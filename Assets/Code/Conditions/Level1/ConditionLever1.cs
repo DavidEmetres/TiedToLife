@@ -6,8 +6,6 @@ public class ConditionLever1 : MonoBehaviour {
 	[SerializeField] GameObject attachedObj;
 
 	void Update () {
-		Debug.Log (this.gameObject.GetComponent<InteractiveBehaviour> ().currentState);
-
 		if (this.gameObject.GetComponent<InteractiveBehaviour> ().currentState != -1) {
 			if(attachedObj.GetComponent<ElevatorBehaviour>().up)
 				this.gameObject.GetComponent<InteractiveBehaviour> ().currentState = 0;

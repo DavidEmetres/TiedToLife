@@ -14,8 +14,10 @@ public class FollowingState : IPuppetState
 
 	public void UpdateState()
 	{
-		FollowPlayer ();
-		LookAt ();
+		if ((PlayerController.Instance.transform.position.y - puppet.transform.position.y) < 3f) {
+			FollowPlayer ();
+			LookAt ();
+		}
 	}
 
 	public void OnTriggerEnter(Collider other)

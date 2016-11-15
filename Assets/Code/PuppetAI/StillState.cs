@@ -27,7 +27,8 @@ public class StillState : IPuppetState
 
 	public void ToInteractState()
 	{
-		//Not possible
+		puppet.currentState = puppet.interactState;
+		puppet.navMeshAgent.stoppingDistance = 1;
 	}
 
 	public void ToFollowingState()

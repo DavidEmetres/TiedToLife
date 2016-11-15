@@ -13,7 +13,7 @@ public class ConditionLever2 : MonoBehaviour {
 
 	public void UseObj() {
 		if (isReady) {
-			attachedObjs[0].GetComponent<ElevatorBehaviour> ().Use ();
+			attachedObjs[0].GetComponent<DoorBehaviour> ().Use ();
 			attachedObjs [1].GetComponent<InteractiveBehaviour> ().currentState = -1;
 			attachedObjs [2].GetComponent<InteractiveBehaviour> ().currentState = 0;
 			isReady = false;

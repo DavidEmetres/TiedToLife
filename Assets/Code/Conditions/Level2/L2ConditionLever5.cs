@@ -11,6 +11,9 @@ public class L2ConditionLever5 : MonoBehaviour {
 	}
 
 	void UseObj() {
-
+		if (!active) {
+			active = true;
+			attachedObject.GetComponent<L2ConditionLever3> ().enable = true;
+		}
 	}
 }

@@ -7,6 +7,7 @@ public class StatePuppetBehavior : MonoBehaviour {
 	GameObject objectInteractingNow;
 	float puppetTimer;
 
+	public float playerSep = 4f;
 	public float puppetLifeTime;
 	public float followingSpeed;
 	public float closerDistanceToEnemies;
@@ -62,7 +63,7 @@ public class StatePuppetBehavior : MonoBehaviour {
 
 			//PUPPET GRABBED BEHAVIOUR
 			if (isGrabbed) {
-				if (Vector3.Distance (this.transform.position, PlayerController.Instance.gameObject.transform.position) > navMeshAgent.stoppingDistance) {
+				if (Vector3.Distance (this.transform.position, PlayerController.Instance.gameObject.transform.position) > playerSep) {
 					if (navMeshAgent.destination != null) {
 						navMeshAgent.Stop ();
 						transform.position = Vector3.Slerp (transform.position, PlayerController.Instance.gameObject.transform.position, Time.deltaTime);
@@ -153,8 +154,13 @@ public class StatePuppetBehavior : MonoBehaviour {
 	public void GrabPuppet(bool b) {
 		if (!b)
 			puppetTimer = Time.realtimeSinceStartup + puppetLifeTime;
-		else if (currentState == stillState)
-			currentState.ToFollowingState ();
+		else if (currentState == stillState) {
+			Debug.Log (objectInteractingNow.name);
+			if (objectInteractingNow != null)
+				currentState.ToInteractState ();
+			else
+				currentState.ToFollowingState ();
+		}
 		
 		isGrabbed = b;
 	}
