@@ -7,9 +7,9 @@ public class ConditionLever1 : MonoBehaviour {
 
 	void Update () {
 		if (this.gameObject.GetComponent<InteractiveBehaviour> ().currentState != -1) {
-			if(attachedObj.GetComponent<ElevatorBehaviour>().up)
-				this.gameObject.GetComponent<InteractiveBehaviour> ().currentState = 0;
-			else if (attachedObj.GetComponent<ElevatorBehaviour> ().isReady)
+			/*if(attachedObj.GetComponent<ElevatorBehaviour>().up)
+				this.gameObject.GetComponent<InteractiveBehaviour> ().currentState = 0;*/
+			if (attachedObj.GetComponent<ElevatorBehaviour> ().isReady)
 				this.gameObject.GetComponent<InteractiveBehaviour> ().currentState = 0;
 		}
 	}

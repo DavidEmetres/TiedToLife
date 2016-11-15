@@ -6,4 +6,4 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FPSTest.unity
+    path: Assets/Scenes/FinalScenes/Level1.unity

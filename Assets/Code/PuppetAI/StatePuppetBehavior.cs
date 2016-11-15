@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class StatePuppetBehavior : MonoBehaviour {
 
-	GameObject objectInteractingNow;
+	public GameObject objectInteractingNow;
 	float puppetTimer;
 
 	public float playerSep = 4f;

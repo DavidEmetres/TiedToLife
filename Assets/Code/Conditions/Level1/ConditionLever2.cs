@@ -4,7 +4,7 @@ using System.Collections;
 public class ConditionLever2 : MonoBehaviour {
 
 	[SerializeField] GameObject[] attachedObjs;
-
+	public bool active = false;
 	public bool isReady = false;
 
 	void Update () {
@@ -12,7 +12,8 @@ public class ConditionLever2 : MonoBehaviour {
 	}
 
 	public void UseObj() {
-		if (isReady) {
+		if (isReady && !active) {
+			active = true;
 			attachedObjs[0].GetComponent<DoorBehaviour> ().Use ();
 			attachedObjs [1].GetComponent<InteractiveBehaviour> ().currentState = -1;
 			attachedObjs [2].GetComponent<InteractiveBehaviour> ().currentState = 0;
