@@ -16,6 +16,8 @@ public class L2ConditionLever3 : MonoBehaviour {
 		if (enable && puppetReady) {
 			attachedObj.GetComponent<DoorBehaviour> ().Use ();
 			enable = false;
+			LevelStructure.Instance.NextStep ();
+			StatePuppetBehavior.Instance.currentState.ToFollowingState ();
 		}
 	}
 }

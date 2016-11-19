@@ -557,7 +557,7 @@ MonoBehaviour:
   wayPoints:
   - {fileID: 0}
   - {fileID: 0}
-  stops: 0101
+  stops: 0001
   stopTime: 2
   occluded: 0
   puppetOccluded: 0

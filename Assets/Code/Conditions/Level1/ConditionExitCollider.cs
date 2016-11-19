@@ -11,7 +11,7 @@ public class ConditionExitCollider : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if (other.tag == "Player") {
-			Application.LoadLevel ("Level 2");
+			Application.LoadLevel ("Level2");
 		}
 	}
 }
