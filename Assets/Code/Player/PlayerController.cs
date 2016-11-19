@@ -14,14 +14,15 @@ public class PlayerController : MonoBehaviour {
 
 	void Awake() {
 		Instance = this;
+
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 	}
 
 	void Start () {
 		cController = GetComponent<CharacterController> ();
 		playerModel = transform.GetChild (1).gameObject;
 		mainCamera.transform.RotateAround (this.transform.position, Vector3.up, -140f);
-
-		Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	void Update () {
@@ -38,7 +39,9 @@ public class PlayerController : MonoBehaviour {
 		float xMov = Input.GetAxis ("Horizontal");
 		float yMov = Input.GetAxis ("Vertical");
 
-		Vector3 movement = (xMov * right + yMov * forward);
+		float diagonallySpeedFactor = (xMov != 0.0f && yMov != 0.0f) ? 0.7071f : 1.0f;
+
+		Vector3 movement = (xMov * diagonallySpeedFactor * right + yMov * diagonallySpeedFactor * forward);
 
 		cController.SimpleMove (movement * speed);
 
