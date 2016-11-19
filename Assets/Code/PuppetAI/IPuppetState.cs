@@ -9,4 +9,5 @@ public interface IPuppetState
 	void ToInteractState();
 	void ToFollowingState();
 	void ToStillState();
+	void ToRunningAwayState();
 }

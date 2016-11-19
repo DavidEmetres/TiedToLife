@@ -14,15 +14,15 @@ public class FollowingState : IPuppetState
 
 	public void UpdateState()
 	{
-		FollowPlayer ();
-		LookAt ();
+		if ((PlayerController.Instance.transform.position.y - puppet.transform.position.y) < 3f) {
+			FollowPlayer ();
+			LookAt ();
+		}
 	}
 
 	public void OnTriggerEnter(Collider other)
 	{
-		Debug.Log ("Cambiando estado");
-		if (other.tag == "Player")
-			ToInteractState ();
+
 	}
 
 	public void OnTriggerExit(Collider other)
@@ -33,25 +33,35 @@ public class FollowingState : IPuppetState
 	public void ToInteractState()
 	{
 		puppet.currentState = puppet.interactState;
+		puppet.navMeshAgent.stoppingDistance = 1;
 	}
 
 	public void ToFollowingState()
 	{
-
+		//Same state
 	}
 
 	public void ToStillState()
 	{
-		
+		puppet.currentState = puppet.stillState;
+	}
+
+	public void ToRunningAwayState() {
+		puppet.currentState = puppet.runningAwayState;
 	}
 
 	private void FollowPlayer()
 	{
-		puppet.navMeshAgent.SetDestination (PlayerController.Instance.transform.position);
+		puppet.target = PlayerController.Instance.transform;
+		puppet.navMeshAgent.SetDestination (puppet.target.position);
+		puppet.navMeshAgent.Resume ();
 	}
 
 	public void LookAt()
 	{
-		puppet.transform.LookAt (PlayerController.Instance.transform);
+		Vector3 lookPos = PlayerController.Instance.gameObject.transform.position - puppet.transform.position;
+		lookPos.y = 0;
+		Quaternion rotation = Quaternion.LookRotation (lookPos);
+		puppet.transform.rotation = Quaternion.Slerp (puppet.transform.rotation, rotation, Time.deltaTime * 5f);
 	}
 }
