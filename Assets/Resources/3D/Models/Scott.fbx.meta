@@ -1,0 +1,178 @@
+fileFormatVersion: 2
+guid: 1b079e71c31784519a81564489d07e08
+timeCreated: 1476743117
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BowTieLeft_1
+    100002: BowTieRight_1
+    100004: ButtonsReto
+    100006: ChalecoRetopo
+    100008: //RootNode
+    100010: Eye_pupil_4
+    100012: Eye_pupil_7
+    100014: EyelashEyeBrowReto
+    100016: HairRetopo_1
+    100018: HeadRetopo_2
+    100020: LeftEyeRetopo_2
+    100022: LeftEyeRetopo_3
+    100024: LeftHandReto_1
+    100026: LeftHandReto_2
+    100028: PM3D_Sphere3D_1
+    100030: RightLegReto_1
+    100032: RightLegReto_2
+    100034: trousers6
+    100036: trousers7_2_SeamsColor_1
+    100038: trousers8_1
+    100040: trousers9_1
+    100042: TrousersRetopo
+    400000: BowTieLeft_1
+    400002: BowTieRight_1
+    400004: ButtonsReto
+    400006: ChalecoRetopo
+    400008: //RootNode
+    400010: Eye_pupil_4
+    400012: Eye_pupil_7
+    400014: EyelashEyeBrowReto
+    400016: HairRetopo_1
+    400018: HeadRetopo_2
+    400020: LeftEyeRetopo_2
+    400022: LeftEyeRetopo_3
+    400024: LeftHandReto_1
+    400026: LeftHandReto_2
+    400028: PM3D_Sphere3D_1
+    400030: RightLegReto_1
+    400032: RightLegReto_2
+    400034: trousers6
+    400036: trousers7_2_SeamsColor_1
+    400038: trousers8_1
+    400040: trousers9_1
+    400042: TrousersRetopo
+    2300000: BowTieLeft_1
+    2300002: BowTieRight_1
+    2300004: ButtonsReto
+    2300006: ChalecoRetopo
+    2300008: Eye_pupil_4
+    2300010: Eye_pupil_7
+    2300012: EyelashEyeBrowReto
+    2300014: HairRetopo_1
+    2300016: HeadRetopo_2
+    2300018: LeftEyeRetopo_2
+    2300020: LeftEyeRetopo_3
+    2300022: LeftHandReto_1
+    2300024: LeftHandReto_2
+    2300026: PM3D_Sphere3D_1
+    2300028: RightLegReto_1
+    2300030: RightLegReto_2
+    2300032: trousers6
+    2300034: trousers7_2_SeamsColor_1
+    2300036: trousers8_1
+    2300038: trousers9_1
+    2300040: TrousersRetopo
+    3300000: BowTieLeft_1
+    3300002: BowTieRight_1
+    3300004: ButtonsReto
+    3300006: ChalecoRetopo
+    3300008: Eye_pupil_4
+    3300010: Eye_pupil_7
+    3300012: EyelashEyeBrowReto
+    3300014: HairRetopo_1
+    3300016: HeadRetopo_2
+    3300018: LeftEyeRetopo_2
+    3300020: LeftEyeRetopo_3
+    3300022: LeftHandReto_1
+    3300024: LeftHandReto_2
+    3300026: PM3D_Sphere3D_1
+    3300028: RightLegReto_1
+    3300030: RightLegReto_2
+    3300032: trousers6
+    3300034: trousers7_2_SeamsColor_1
+    3300036: trousers8_1
+    3300038: trousers9_1
+    3300040: TrousersRetopo
+    4300000: HeadRetopo_2
+    4300002: EyelashEyeBrowReto
+    4300004: LeftEyeRetopo_3
+    4300006: LeftEyeRetopo_2
+    4300008: HairRetopo_1
+    4300010: trousers9_1
+    4300012: ButtonsReto
+    4300014: trousers8_1
+    4300016: ChalecoRetopo
+    4300018: TrousersRetopo
+    4300020: trousers7_2_SeamsColor_1
+    4300022: trousers6
+    4300024: BowTieLeft_1
+    4300026: BowTieRight_1
+    4300028: PM3D_Sphere3D_1
+    4300030: LeftHandReto_2
+    4300032: RightLegReto_2
+    4300034: LeftHandReto_1
+    4300036: Eye_pupil_7
+    4300038: Eye_pupil_4
+    4300040: RightLegReto_1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

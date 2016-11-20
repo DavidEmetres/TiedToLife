@@ -851,6 +851,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1486969431}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!1 &1648635123
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,6 +981,50 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+=======
+--- !u!1001 &1745092197
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013241091768, guid: bc093c5c0724ec74a87f7eed2db03ed5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -14.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013241091768, guid: bc093c5c0724ec74a87f7eed2db03ed5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013241091768, guid: bc093c5c0724ec74a87f7eed2db03ed5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -8.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013241091768, guid: bc093c5c0724ec74a87f7eed2db03ed5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013241091768, guid: bc093c5c0724ec74a87f7eed2db03ed5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013241091768, guid: bc093c5c0724ec74a87f7eed2db03ed5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013241091768, guid: bc093c5c0724ec74a87f7eed2db03ed5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013241091768, guid: bc093c5c0724ec74a87f7eed2db03ed5, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bc093c5c0724ec74a87f7eed2db03ed5, type: 2}
+  m_IsPrefabParent: 0
+>>>>>>> origin/Jose2
 --- !u!1 &2138888725
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,6 +42,8 @@ public class ChaseState : IEnemy {
 	}
 
 	void Chase() {
+		enemy.nav.Resume ();
+
 		if (missing) {
 			enemy.nav.SetDestination (lastPos);
 
@@ -57,6 +59,6 @@ public class ChaseState : IEnemy {
 	}
 
 	void UpdateSight() {
-		enemy.sight.material.color = Color.red;
+		enemy.sight.material.color = new Color(1,0,0,0.25f);
 	}
 }
