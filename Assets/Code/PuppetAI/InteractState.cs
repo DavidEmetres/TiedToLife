@@ -15,16 +15,12 @@ public class InteractState : IPuppetState
 
 	public void UpdateState()
 	{
-<<<<<<< HEAD
-		GoInteract ();
-=======
 		if (Vector3.Distance(puppet.transform.position, puppet.target.transform.position) > puppet.navMeshAgent.stoppingDistance)
 			GoInteract ();
 		else
 			Interact ();
 
 		LookAt ();
->>>>>>> origin/Jose2
 	}
 
 	public void OnTriggerEnter(Collider other)
@@ -34,21 +30,12 @@ public class InteractState : IPuppetState
 
 	public void OnTriggerExit(Collider other)
 	{
-<<<<<<< HEAD
-		if (other.tag == "Player")
-			ToFollowingState ();
-=======
 
->>>>>>> origin/Jose2
 	}
 
 	public void ToInteractState()
 	{
-<<<<<<< HEAD
-
-=======
 		//Same state
->>>>>>> origin/Jose2
 	}
 
 	public void ToFollowingState()
@@ -59,25 +46,15 @@ public class InteractState : IPuppetState
 
 	public void ToStillState()
 	{
-<<<<<<< HEAD
-
-=======
 		puppet.currentState = puppet.stillState;
 	}
 
 	public void ToRunningAwayState() {
 		puppet.currentState = puppet.runningAwayState;
->>>>>>> origin/Jose2
 	}
 
 	private void GoInteract()
 	{
-<<<<<<< HEAD
-		Debug.Log ("Yendo al boton");
-		puppet.navMeshAgent.stoppingDistance = 0;
-		pos = puppet.target.position;
-		puppet.navMeshAgent.SetDestination (pos);
-=======
 		pos = puppet.target.position;
 		puppet.navMeshAgent.SetDestination (pos);
 		puppet.navMeshAgent.Resume ();
@@ -95,6 +72,5 @@ public class InteractState : IPuppetState
 		lookPos.y = 0;
 		Quaternion rotation = Quaternion.LookRotation (lookPos);
 		puppet.transform.rotation = Quaternion.Slerp (puppet.transform.rotation, rotation, Time.deltaTime * 5f);
->>>>>>> origin/Jose2
 	}
 }

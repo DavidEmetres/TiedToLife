@@ -6,14 +6,11 @@ public class EnemyBehaviour : MonoBehaviour {
 	public Transform[] wayPoints;
 	public bool[] stops;
 	public float stopTime = 4f;
-<<<<<<< HEAD
-=======
 	public bool occluded = false;
 	public bool puppetOccluded = false;
 	public LayerMask rayCastLayer;
 	public bool stunned = false;
 	[HideInInspector] public Vector3 direction;
->>>>>>> origin/Jose2
 	[HideInInspector] public Transform target;
 	[HideInInspector] public Animator sightAnim;
 	[HideInInspector] public MeshRenderer sight;
@@ -38,13 +35,6 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
 	void Update() {
-<<<<<<< HEAD
-		currentState.UpdateState ();
-	}
-
-	void OnTriggerEnter(Collider other) {
-		currentState.OnTriggerEnter (other);
-=======
 		if (!stunned) {
 			if (!sight.gameObject.activeInHierarchy)
 				sight.gameObject.SetActive (true);
@@ -78,7 +68,6 @@ public class EnemyBehaviour : MonoBehaviour {
 		}
 		else
 			occluded = true;
->>>>>>> origin/Jose2
 	}
 
 	void CheckObstaclesPuppet() {
@@ -107,13 +96,17 @@ public class EnemyBehaviour : MonoBehaviour {
 			StatePuppetBehavior.Instance.currentState.ToStillState ();
 		}
 
-		currentState.OnTriggerEnter (other);
+		currentState.OnSightTriggerEnter (other);
 	}
 
 	public void SightExit(Collider other) {
 		if (other.tag == "Player" && target != null)
 			target = null;
 
-		currentState.OnTriggerExit (other);
+		currentState.OnSightTriggerExit (other);
+	}
+
+	public void NearZoneTriggered(Collider other) {
+		currentState.OnNearZoneTriggerEnter (other);
 	}
 }

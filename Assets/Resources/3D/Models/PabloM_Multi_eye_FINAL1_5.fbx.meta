@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: c3b66f907f5054a7a9adce0fdd1cf823
+timeCreated: 1476524424
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: abuela18_01
+    100002: abuelaFinal_hlowpoly6_1
+    100004: Brazos
+    100006: Extract2_3
+    100008: Eye_pupil_2
+    100010: Eye_pupil_3
+    100012: Gafas
+    100014: Lazo2
+    100016: Merged_pSphere22
+    100018: Mesh_SeamsColor
+    100020: //RootNode
+    100022: PabloM_Multi_eye_FINAL1_5
+    100024: PabloM_Multi_eye_FINAL1_6
+    100026: pantalon_2
+    100028: PM3D_Sphere3D
+    100030: PM3D_Sphere3D1_1
+    100032: scarf_1
+    100034: Zapato1
+    100036: Zapato2
+    400000: abuela18_01
+    400002: abuelaFinal_hlowpoly6_1
+    400004: Brazos
+    400006: Extract2_3
+    400008: Eye_pupil_2
+    400010: Eye_pupil_3
+    400012: Gafas
+    400014: Lazo2
+    400016: Merged_pSphere22
+    400018: Mesh_SeamsColor
+    400020: PabloM_Multi_eye_FINAL1_5
+    400022: //RootNode
+    400024: PabloM_Multi_eye_FINAL1_6
+    400026: pantalon_2
+    400028: PM3D_Sphere3D
+    400030: PM3D_Sphere3D1_1
+    400032: scarf_1
+    400034: Zapato1
+    400036: Zapato2
+    2300000: abuela18_01
+    2300002: abuelaFinal_hlowpoly6_1
+    2300004: Brazos
+    2300006: Extract2_3
+    2300008: Eye_pupil_2
+    2300010: Eye_pupil_3
+    2300012: Gafas
+    2300014: Lazo2
+    2300016: Merged_pSphere22
+    2300018: Mesh_SeamsColor
+    2300020: PabloM_Multi_eye_FINAL1_5
+    2300022: PabloM_Multi_eye_FINAL1_6
+    2300024: pantalon_2
+    2300026: PM3D_Sphere3D
+    2300028: PM3D_Sphere3D1_1
+    2300030: scarf_1
+    2300032: Zapato1
+    2300034: Zapato2
+    3300000: abuela18_01
+    3300002: abuelaFinal_hlowpoly6_1
+    3300004: Brazos
+    3300006: Extract2_3
+    3300008: Eye_pupil_2
+    3300010: Eye_pupil_3
+    3300012: Gafas
+    3300014: Lazo2
+    3300016: Merged_pSphere22
+    3300018: Mesh_SeamsColor
+    3300020: PabloM_Multi_eye_FINAL1_5
+    3300022: PabloM_Multi_eye_FINAL1_6
+    3300024: pantalon_2
+    3300026: PM3D_Sphere3D
+    3300028: PM3D_Sphere3D1_1
+    3300030: scarf_1
+    3300032: Zapato1
+    3300034: Zapato2
+    4300000: abuelaFinal_hlowpoly6_1
+    4300002: PM3D_Sphere3D1_1
+    4300004: PM3D_Sphere3D
+    4300006: PabloM_Multi_eye_FINAL1_6
+    4300008: Eye_pupil_3
+    4300010: Eye_pupil_2
+    4300012: Gafas
+    4300014: Merged_pSphere22
+    4300016: pantalon_2
+    4300018: Mesh_SeamsColor
+    4300020: scarf_1
+    4300022: abuela18_01
+    4300024: Brazos
+    4300026: Zapato2
+    4300028: Extract2_3
+    4300030: Zapato1
+    4300032: Lazo2
+    4300034: PabloM_Multi_eye_FINAL1_5
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

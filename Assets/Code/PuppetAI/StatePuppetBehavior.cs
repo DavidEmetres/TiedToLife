@@ -1,16 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-<<<<<<< HEAD
-
-public class StatePuppetBehavior : MonoBehaviour {
-
-	public float followingSpeed;
-	public float followingDistance;
-	public Vector3 offset = new Vector3 (0, 5f, 0);
-	public float sightRange = 500f;
-	public Transform player;
-
-=======
 using System.Collections.Generic;
 
 public class StatePuppetBehavior : MonoBehaviour {
@@ -24,7 +13,6 @@ public class StatePuppetBehavior : MonoBehaviour {
 	public float closerDistanceToEnemies;
 	[HideInInspector] public List<GameObject> closeEnemies = new List<GameObject> ();
 	[HideInInspector] public List<GameObject> objectsInSight = new List<GameObject> ();
->>>>>>> origin/Jose2
 	[HideInInspector] public Transform target;
 	[HideInInspector] public Transform chaseTarget;
 	[HideInInspector] public Collider rangeMax;
@@ -33,13 +21,9 @@ public class StatePuppetBehavior : MonoBehaviour {
 	[HideInInspector] public StillState stillState;
 	[HideInInspector] public FollowingState followingState;
 	[HideInInspector] public InteractState interactState;
-<<<<<<< HEAD
-	[HideInInspector] public NavMeshAgent navMeshAgent;
-=======
 	[HideInInspector] public RunningAwayState runningAwayState;
 	[HideInInspector] public NavMeshAgent navMeshAgent;
 	[HideInInspector] public bool isGrabbed = true;
->>>>>>> origin/Jose2
 
 	public static StatePuppetBehavior Instance;
 
@@ -51,29 +35,16 @@ public class StatePuppetBehavior : MonoBehaviour {
 		interactState = new InteractState (this);
 		followingState = new FollowingState (this);
 		stillState = new StillState (this);
-<<<<<<< HEAD
-=======
 		runningAwayState = new RunningAwayState (this);
->>>>>>> origin/Jose2
 
 		navMeshAgent = GetComponent<NavMeshAgent> ();
 	}
 
-<<<<<<< HEAD
-	// Use this for initialization
-=======
->>>>>>> origin/Jose2
 	void Start ()
 	{
 		currentState = followingState;
 	}
 	
-<<<<<<< HEAD
-	// Update is called once per frame
-	void Update ()
-	{
-		currentState.UpdateState ();
-=======
 	void Update ()
 	{
 		currentState.UpdateState ();
@@ -109,7 +80,6 @@ public class StatePuppetBehavior : MonoBehaviour {
 				}
 			}
 		}
->>>>>>> origin/Jose2
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -119,38 +89,15 @@ public class StatePuppetBehavior : MonoBehaviour {
 
 	public void ObjectTriggered(Collider other, GameObject objColliding)
 	{
-<<<<<<< HEAD
-		Debug.Log ("Calling State Machine");	
-		if (other.tag == "Player" && target == null)
-		{
-			Debug.Log ("Asignando objetivo");
-			target = objColliding.transform;
-		}
-
-		currentState.OnTriggerEnter (other);
-			
-=======
 		if (other.tag == "interactive")
 		{
 			if(!objectsInSight.Contains(objColliding))
 				objectsInSight.Add (objColliding);
 		}
->>>>>>> origin/Jose2
 	}
 
 	public void ObjectExit(Collider other, GameObject objColliding)
 	{
-<<<<<<< HEAD
-		if (other.tag == "Player" && target != null)
-		{
-			Debug.Log ("Desasignando objetivo");
-			target = null;
-		}
-
-		currentState.OnTriggerExit (other);
-	}
-		
-=======
 		if (other.tag == "interactive")
 		{
 			if (objColliding == target.gameObject) {
@@ -222,5 +169,4 @@ public class StatePuppetBehavior : MonoBehaviour {
 		float lifeTime = (isGrabbed)? puppetLifeTime : (puppetTimer - Time.realtimeSinceStartup);
 		GUI.Label (new Rect (100, 100, 100, 100), "LIFE TIME: " + lifeTime);
 	}
->>>>>>> origin/Jose2
 }

@@ -9,8 +9,5 @@ public interface IPuppetState
 	void ToInteractState();
 	void ToFollowingState();
 	void ToStillState();
-<<<<<<< HEAD
-=======
 	void ToRunningAwayState();
->>>>>>> origin/Jose2
 }
